@@ -16,5 +16,6 @@ async def on_ready():
 async def test(ctx):
     await ctx.send("Hello")
 
-bot.run(os.environ.get("TOKEN"), bot = False)
+token = os.getenv("TOKEN")
+bot.run(token, bot = False)
 
