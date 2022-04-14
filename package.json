@@ -1,0 +1,24 @@
+{
+  "name": "raid-bot",
+  "version": "1.0.0",
+  "description": "Raid bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrogDog56/Raid-Bot.git"
+  },
+  "author": "FrogDog56",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrogDog56/Raid-Bot/issues"
+  },
+  "homepage": "https://github.com/FrogDog56/Raid-Bot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "dotenv": "^16.0.0"
+  }
+}
