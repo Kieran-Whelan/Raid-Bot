@@ -8,13 +8,13 @@ dotenv.config()
 
 client.on('ready', () => {
     console.log("");                                   
-    console.log((chalk.green(`#####    #####      ####     ####   #####     `)));
-    console.log((chalk.green(`#        #    #    #    #   #       #    #    `)));
-    console.log((chalk.green(`#        #    #    #    #   #       #    #    `)));
-    console.log((chalk.green(`#####    #####     #    #   #  ##   #####     `)));
-    console.log((chalk.green(`#        #   #     #    #   #    #  #   #     `)));
-    console.log((chalk.green(`#        #    #    #    #   #    #  #    #    `)));
-    console.log((chalk.green(`#        #     #    ####     ####   #     #   `)));
+    console.log((chalk.green(`#####    #####      ####     ####    #####     `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #    `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #    `)));
+    console.log((chalk.green(`#####    #####     #    #   #  ##    #####     `)));
+    console.log((chalk.green(`#        #   #     #    #   #    #   #   #     `)));
+    console.log((chalk.green(`#        #    #    #    #   #    #   #    #    `)));
+    console.log((chalk.green(`#        #     #    ####     ####    #     #   `)));
     console.log("");                                                                  
     console.log((chalk.cyan(`Discord: FrogDog#4630`)));   
     console.log((chalk.cyan(`Github: https://github.com/GalackQSM`)));  
