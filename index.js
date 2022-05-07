@@ -4,9 +4,14 @@ const chalk = new require('chalk');
 const dotenv = require('dotenv');
 const prefix = "$";
 
-dotenv.config()
+dotenv.config();
 
-client.on('ready', () => {
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+client.on('ready', async () => {
     console.log("");                                   
     console.log((chalk.green(`#####    #####      ####     ####    #####     `)));
     console.log((chalk.green(`#        #    #    #    #   #        #    #    `)));
@@ -17,12 +22,12 @@ client.on('ready', () => {
     console.log((chalk.green(`#        #     #    ####     ####    #     #   `)));
     console.log("");                                                                  
     console.log((chalk.cyan(`Discord: FrogDog#4630`)));   
-    console.log((chalk.cyan(`Github: https://github.com/GalackQSM`)));  
+    console.log((chalk.cyan(`Github: https://github.com/FrogDog56`)));  
     console.log(""); 
     console.log((chalk.red(`Successfully logged in as ${client.user.tag}`)));                             
 });
 
-client.on('message', (msg) => {
+client.on('message', async (msg) => {
     //checks for client prefix
     if (msg.content.toString()[0] === prefix) {
         let msgStr = msg.content.toString().concat(" ", "end");
@@ -41,6 +46,7 @@ client.on('message', (msg) => {
         if (args[0] === "repeat") {
             for (let i = 0; i < parseInt(args[2]); i++) {
                 msg.channel.send(args[1]);
+                await sleep(6000);
             }
         } else {
             msg.channel.send("Error: no such command exists!")
