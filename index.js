@@ -13,13 +13,13 @@ function sleep(ms) {
 
 client.on('ready', async () => {
     console.log("");                                   
-    console.log((chalk.green(`#####    #####      ####     ####    #####     `)));
-    console.log((chalk.green(`#        #    #    #    #   #        #    #    `)));
-    console.log((chalk.green(`#        #    #    #    #   #        #    #    `)));
-    console.log((chalk.green(`#####    #####     #    #   #  ##    #####     `)));
-    console.log((chalk.green(`#        #   #     #    #   #    #   #   #     `)));
-    console.log((chalk.green(`#        #    #    #    #   #    #   #    #    `)));
-    console.log((chalk.green(`#        #     #    ####     ####    #     #   `)));
+    console.log((chalk.green(`#####    #####      ####     ####    #####            `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #           `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #           `)));
+    console.log((chalk.green(`#####    #####     #    #   #  ##    #####            `)));
+    console.log((chalk.green(`#        #   #     #    #   #    #   #   #            `)));
+    console.log((chalk.green(`#        #    #    #    #   #    #   #    #           `)));
+    console.log((chalk.green(`#        #     #    ####     ####    #     #          `)));
     console.log("");                                                                  
     console.log((chalk.cyan(`Discord: FrogDog#4630`)));   
     console.log((chalk.cyan(`Github: https://github.com/FrogDog56`)));  
@@ -44,9 +44,13 @@ client.on('message', async (msg) => {
         }
 
         if (args[0] === "repeat") {
-            for (let i = 0; i < parseInt(args[2]); i++) {
-                msg.channel.send(args[1]);
-                await sleep(6000);
+            for (let i = 0; i < parseInt(args[1]); i++) {
+                let msgWords = [];
+                for (let j = 2; j < args.length; j++) {
+                    msgWords.push(args[j]);
+                };
+                msg.channel.send(msgWords.toString().replace("," , " "));
+                await sleep(3200);
             }
         } else {
             msg.channel.send("Error: no such command exists!")
