@@ -50,7 +50,7 @@ client.on('message', async (msg) => {
                     msgWords.push(args[j]);
                 };
                 msg.channel.send(msgWords.toString().replace("," , " "));
-                await sleep(3200);
+                await sleep(800);
             }
         } else {
             msg.channel.send("Error: no such command exists!")
