@@ -13,13 +13,13 @@ function sleep(ms) {
 
 client.on('ready', async () => {
     console.log("");                                   
-    console.log((chalk.green(`#####    #####      ####     ####    #####            `)));
-    console.log((chalk.green(`#        #    #    #    #   #        #    #           `)));
-    console.log((chalk.green(`#        #    #    #    #   #        #    #           `)));
-    console.log((chalk.green(`#####    #####     #    #   #  ##    #####            `)));
-    console.log((chalk.green(`#        #   #     #    #   #    #   #   #            `)));
-    console.log((chalk.green(`#        #    #    #    #   #    #   #    #           `)));
-    console.log((chalk.green(`#        #     #    ####     ####    #     #          `)));
+    console.log((chalk.green(`#####    #####      ####     ####    #####          #         #   #####    `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #        # #            #    #   `)));
+    console.log((chalk.green(`#        #    #    #    #   #        #    #       #   #       #   #     #  `)));
+    console.log((chalk.green(`#####    #####     #    #   #  ##    #####        #####       #   #      # `)));
+    console.log((chalk.green(`#        #   #     #    #   #    #   #   #       #      #     #   #     #  `)));
+    console.log((chalk.green(`#        #    #    #    #   #    #   #    #     #        #    #   #    #   `)));
+    console.log((chalk.green(`#        #     #    ####     ####    #     #   #          #   #   #####    `)));
     console.log("");                                                                  
     console.log((chalk.cyan(`Discord: FrogDog#4630`)));   
     console.log((chalk.cyan(`Github: https://github.com/FrogDog56`)));  
@@ -50,7 +50,7 @@ client.on('message', async (msg) => {
                     msgWords.push(args[j]);
                 };
                 msg.channel.send(msgWords.toString().replaceAll(",", " "));
-                await sleep(800);
+                await sleep(500);
             }
         } else {
             msg.channel.send("Error: no such command exists!");
