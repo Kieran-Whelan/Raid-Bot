@@ -49,11 +49,11 @@ client.on('message', async (msg) => {
                 for (let j = 2; j < args.length; j++) {
                     msgWords.push(args[j]);
                 };
-                msg.channel.send(msgWords.toString().replace("," , " "));
+                msg.channel.send(msgWords.toString().replaceAll(",", " "));
                 await sleep(800);
             }
         } else {
-            msg.channel.send("Error: no such command exists!")
+            msg.channel.send("Error: no such command exists!");
         }
     }
 });
