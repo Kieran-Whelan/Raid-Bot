@@ -9,6 +9,7 @@ const prefix = "$";
 dotenv.config();
 
 let htmlText = "";
+let htmlPicture = "";
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -24,17 +25,30 @@ function getRandomUrl() {
 }
 
 function fetch() {
-    request("https://copypastatext.com/" + getRandomUrl() + "/", function (error, response, body) {
-        htmlText = body.match(/<code>([^<]+)<\/code>/)[1].toString();
+    let url = "https://copypastatext.com/" + getRandomUrl() + "/";
+    console.log(url);
+    request(url, function (error, response, body) {
+        try {
+            htmlText = body.match(/<code>([^<]+)<\/code>/)[1].toString();
 
-        if (htmlText.length > 1900) {
-            htmlText = htmlText.substring(0, 1900);
+            if (htmlText.length > 1900) {
+                htmlText = htmlText.substring(0, 1900);
+            }
+        } catch (error) {
+            console.error(error);
         }
     }) 
 }
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function react(msg) {
+    msg.react('🤓');
+    msg.react('🇬');
+    msg.react('🇦');
+    msg.react('🇾');
 }
 
 client.on('ready', async () => {
@@ -62,8 +76,16 @@ client.on('ready', async () => {
 });
 
 client.on('message', async (msg) => {
+    react(msg);
+
     //user check
+    /*
     if (msg.author.id != "652627153418190881") {
+        return;
+    }
+    */
+
+    if (msg.author.id == "787099901121003561" || msg.author.id == "272790421837578240") {
         return;
     }
 
@@ -92,9 +114,14 @@ client.on('message', async (msg) => {
                 await sleep(500);
             }
         } else if (args[0] === "shitpost") {
-            fetch();
-            await sleep(1000);
-            msg.channel.send(htmlText);
+            for (let i = 0; i < parseInt(args[1]); i++) {
+                fetch();
+                await sleep(1000);
+                console.log(htmlPicture);
+                msg.channel.send(htmlText);
+                msg.channel.send("!==============================================================!");
+            }
+
         } else {
             msg.channel.send("Error: no such command exists!");
         }
