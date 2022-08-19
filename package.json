@@ -19,7 +19,10 @@
   "homepage": "https://github.com/FrogDog56/Raid-Bot#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.12",
     "discord.js": "^11.3.2",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   }
 }
