@@ -9,7 +9,6 @@ const prefix = "$";
 dotenv.config();
 
 let htmlText = "";
-let htmlPicture = "";
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -76,18 +75,13 @@ client.on('ready', async () => {
 });
 
 client.on('message', async (msg) => {
-    react(msg);
-
+    //react(msg);
     //user check
     /*
     if (msg.author.id != "652627153418190881") {
         return;
     }
     */
-
-    if (msg.author.id == "787099901121003561" || msg.author.id == "272790421837578240") {
-        return;
-    }
 
     //checks for client prefix
     if (msg.content.toString()[0] === prefix) {
@@ -117,7 +111,6 @@ client.on('message', async (msg) => {
             for (let i = 0; i < parseInt(args[1]); i++) {
                 fetch();
                 await sleep(1000);
-                console.log(htmlPicture);
                 msg.channel.send(htmlText);
                 msg.channel.send("!==============================================================!");
             }
