@@ -4,6 +4,7 @@ const chalk = new require('chalk');
 const dotenv = require('dotenv');
 const request = require('request');
 const {readFileSync, promises: fsPromises} = require('fs');
+//you can change the prefix var to anything you want
 const prefix = "$";
 
 dotenv.config();
@@ -43,13 +44,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function react(msg) {
-    msg.react('🤓');
-    msg.react('🇬');
-    msg.react('🇦');
-    msg.react('🇾');
-}
-
 client.on('ready', async () => {
     console.log("");                                   
     console.log((chalk.green(`#####    #####      ####     ####    #####          #         #   #####    `)));
@@ -65,17 +59,9 @@ client.on('ready', async () => {
     console.log((chalk.cyan(`Repo: https://github.com/FrogDog56/Raid-Bot`)));    
     console.log(""); 
     console.log((chalk.red(`Successfully logged in as ${client.user.tag}`)));
-
-    client.user.setActivity({
-        game : {
-            name : "Heck",
-            type : "PLAYING"
-        }
-    });
 });
 
 client.on('message', async (msg) => {
-    //react(msg);
     //user check
     /*
     if (msg.author.id != "652627153418190881") {
@@ -121,4 +107,6 @@ client.on('message', async (msg) => {
     }
 });
 
+//enter your token here as a string it should look like this
+//client.login("token");
 client.login(process.env.TOKEN);
