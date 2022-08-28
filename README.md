@@ -18,3 +18,6 @@ Example : $repeat @FrogDog 50
 $shitpost [amount of times]
 
 Example: $shitpost 50
+
+## Disclaimer
+I am not responsible for whatever you use this bot for.
