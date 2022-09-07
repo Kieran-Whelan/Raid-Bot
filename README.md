@@ -1,5 +1,5 @@
 # Raid Bot
-Just a discord raid bot that can spam a server with messages that you type. This is a userbot so you don't need a bot token. If you want to find out your token use my token logger script https://github.com/FrogDog56/Discord-Token-Logger-Script.
+Just a discord raid bot that can spam a server with messages that you type. This is a userbot so you don't need a bot token. If you want to find out your token use my token logger script https://github.com/FrogDog56/Discord-WepApp-Token-Logger-Script.
 
 ## Usage
 ### Prefix
