@@ -1,9 +1,8 @@
 {
   "name": "raid-bot",
   "version": "1.0.0",
-  "description": "Raid bot",
+  "description": "discord user raid bot",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,18 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/FrogDog56/Raid-Bot.git"
   },
-  "author": "FrogDog56",
-  "license": "MIT",
+  "author": "Kieran Whelan",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/FrogDog56/Raid-Bot/issues"
   },
   "homepage": "https://github.com/FrogDog56/Raid-Bot#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.12",
-    "discord.js": "^11.3.2",
-    "dotenv": "^16.0.0",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "discord-user-bots": "^1.6.0",
+    "dotenv": "^16.0.3"
   }
 }
